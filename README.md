@@ -107,7 +107,9 @@ This involves writing a file to /system, which may prevent you from installing f
 
 9. I don't think the AVB/dm-verity option needs to be checked, so I left it unchecked. YMMV. The inkPalm doesn't encrypt itself even if you enable a PIN.
 
-10. Transfer the magisk_patched*.img file in your Downloads folder onto the PC
+10. Choose bimg.img from the storage and let Magisk do its thing
+
+11. Transfer the magisk_patched*.img file in your Downloads folder onto the PC
 
 ### Flashing the patched kernel image
 
