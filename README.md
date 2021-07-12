@@ -57,8 +57,10 @@ Back in Android, copying that file to /sdcard and having Magisk patch it worked.
 
 * The stock recovery, for which there is no alternative, is pretty restricted. You might be able to get out of a bootloop by erasing /data at the cost of losing your data. There is the untested possibility of maybe writing a file to disable Magisk through a sideloaded ZIP.
 
-* There's [this comment](https://old.reddit.com/r/eink/comments/n1yn02/new_xiaomi_pocket_reader_hands_on/gwiv097/) regarding downsides of rooting the MiReader
-  
+* There's [this comment](https://old.reddit.com/r/eink/comments/n1yn02/new_xiaomi_pocket_reader_hands_on/gwiv097/) regarding downsides of rooting the MiReader. (Note: After a month of having a rooted inkPalm, I have had no stability or boot issues. I never, and do not plan to, install(ed) Xposed on the inkPalm. Just sayin'.)
+
+* That application you bought from the Play Store that you want to run on the inkPalm may work without Google Play Services
+
 # Fine, just show me the rooting steps, dude
 
 This assumes you have ADB set up. This is something that has been covered in [countless](https://github.com/philips/inkpalm-5-adb-english) [guides](https://github.com/epodegrid/epd106-ADB) on the Internet. It is not something I will provide help for.
@@ -101,7 +103,7 @@ This involves writing a file to /system, which may prevent you from installing f
 
 6. Back in an `adb shell`, run `cp /system/bimg.img /sdcard/`
 
-7. Install the [Magisk APK](https://github.com/topjohnwu/Magisk/releases/tag/latest)
+7. Install the [Magisk APK](https://github.com/topjohnwu/Magisk/releases/latest)
 
 8. Open Magisk, tap install
 
@@ -145,7 +147,9 @@ This involves writing a file to /system, which may prevent you from installing f
 
 # microG
 
-I would recommend doing this only if you're trying to run applications that require Google Play Services (GPS for short). One person who installed microG on his MiReader ended up removing it because supposedly there was increased battery drain. [Aurora Store](https://f-droid.org/en/packages/com.aurora.store/) is an excellent Google Play Store alternative client that runs on unrooted devices without any form of Google Play Services installed.
+I would recommend doing this only if you're trying to run applications that require Google Play Services (GPS for short). One person who installed microG on his MiReader ended up removing it because supposedly there was increased battery drain. 
+
+[Aurora Store](https://f-droid.org/en/packages/com.aurora.store/) is an excellent Google Play Store alternative client that runs on unrooted devices without any form of Google Play Services installed. Although I have seen quite a few warnings from various people since saying not to sign in because Google may terminate your account for going against their terms of service. I haven't read of any confirmed cases though. If you don't want to take the risk, just stick to using it with the anonymous accounts it offers. 
 
 ## Setting up signature spoofing
 
@@ -172,11 +176,15 @@ Once you have the Magisk module it generated for your inkPalm installed and enab
 4. Install the ZIP with Magisk and reboot
 5. You should see new a microG Settings icon. Go crazy.
 
-I went for the `MinimalIAP` version as a "just-in-case" measure; in actuality, the `Minimal` version would be just fine for me: I've actually disabled the Play Store and use Aurora Store.
+I went for the `MinimalIAP` version. 
+
+If you don't want the Play Store to be enabled all the time for battery reasons, [FreezeYou!](https://android.izzysoft.de/repo/apk/cf.playhi.freezeyou) makes disabling it a doddle.
 
 # How do I unroot?!
 
 I literally have no idea. Remember, the original firmware for this device isn't available.
+
+If you never wrote a single file to /system, then flashing the stock boot image *may* undo most of it, thanks to Magisk's systemless nature. I haven't tried that though and cannot say if flashing the original boot image is safe to do.
 
 # What about OTAs?
 
