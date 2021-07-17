@@ -20,6 +20,7 @@ The inkPalm 5 is a 5.2" eReader with an Allwinner 32-bit ARM B300 CPU and 1GB RA
 * [microG](#microg)
   * [Setting up signature spoofing](#setting-up-signature-spoofing)
   * [Installing microG](#installing-microg)
+* [Bromite WebView](#bromite-webview)
 * [How do I unroot?!](#how-do-i-unroot)
 * [What about OTAs?](#what-about-otas)
 * [Launcher plug](#launcher-plug)
