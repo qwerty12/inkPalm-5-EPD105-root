@@ -180,11 +180,31 @@ I went for the `MinimalIAP` version.
 
 If you don't want the Play Store to be enabled all the time for battery reasons, [FreezeYou!](https://android.izzysoft.de/repo/apk/cf.playhi.freezeyou) makes disabling it a doddle.
 
+# Bromite WebView
+
+The included WebView is very old, from Android 8.1. You will not recieve updates for it from the Play Store. It can however be replaced with [Bromite's](https://www.bromite.org/) SystemWebView.
+
+1. Download [BromiteWebView.zip](https://github.com/qwerty12/inkPalm-5-EPD105-root/raw/main/BromiteWebView.zip)
+
+2. Download the latest [SystemWebView](https://www.bromite.org/system_web_view) for ARM (not ARM64)
+
+3. Rename the downloaded file (which is currently `arm_SystemWebView.apk`) to `webview.apk` (this is case-sensitive)
+
+4. Using your favourite archive manager, open BromiteWebView.zip and add webview.apk to the system/app/webview folder inside the ZIP
+
+5. Open the downloaded webview.apk with your archiver, go to lib/armeabi-v7a and extract the two `.so` files
+
+6. Place the extracted so files into the system/app/webview/lib/arm folder inside the ZIP
+
+7. Transfer the zip to your inkPalm and use Magisk to install it. Reboot.
+
+For updates to the Bromite WebView, either add the [F-Droid](https://www.bromite.org/fdroid) repository or repeat the above process when neeeded.
+
 # How do I unroot?!
 
 I literally have no idea. Remember, the original firmware for this device isn't available.
 
-If you never wrote a single file to /system, then flashing the stock boot image *may* undo most of it, thanks to Magisk's systemless nature. I haven't tried that though and cannot say if flashing the original boot image is safe to do.
+If you never wrote a single file to /system, then flashing the stock boot image *may* undo most of it, thanks to Magisk's systemless nature. Not having tried that, I cannot say if it is safe to do.
 
 # What about OTAs?
 
