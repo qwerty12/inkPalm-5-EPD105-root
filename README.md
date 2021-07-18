@@ -1,6 +1,6 @@
 # inkPalm-5-EPD105-root
 
-**Follow anything in this guide at your own risk. I will not accept any responsibility if you are left with a bricked device, and/or a device that is damaged or impaired in some way.** These steps are a reconstruction of what I was doing - I haven't tested the resulting files linked to in this guide.
+**Follow anything in this guide at your own risk. I will not accept any responsibility if you are left with a bricked device, and/or a device that is damaged or impaired in some way.**
 
 The inkPalm 5 is a 5.2" eReader with an Allwinner 32-bit ARM B300 CPU and 1GB RAM running Android 8.1 sold in China under Xiaomi's Moaan brand.
 
