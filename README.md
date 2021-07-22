@@ -155,7 +155,7 @@ I would recommend doing this only if you're trying to run applications that requ
 
 ## Setting up signature spoofing
 
-In order for microG to pretend it is the real GPS, [signature](https://github.com/microg/GmsCore/wiki/Signature-Spoofing) [spoofing](https://github.com/FriendlyNeighborhoodShane/MinMicroG/blob/master/install.md#microg-signature-spoofing) must be set up. As those two links show, there's many ways of achieving it.
+In order for microG to pretend it is the real Play Services, [signature](https://github.com/microg/GmsCore/wiki/Signature-Spoofing) [spoofing](https://github.com/FriendlyNeighborhoodShane/MinMicroG/blob/master/install.md#microg-signature-spoofing) must be set up. As those two links show, there's many ways of achieving it.
 
 I used [fOmey's Smali Patcher](https://forum.xda-developers.com/t/module-smali-patcher-7-3.3680053/) with only these options:
 
@@ -186,8 +186,6 @@ Once you have the Magisk module it generated for your inkPalm installed and enab
 
 7. Add an account if you plan to use the Play Store. I also registered my device.
 
-8. When you open the Play Store, it will not be functioning properly. This seemed to solve itself automatically for me after some hours. You *may* be able to speed things up by clearing the Play Store's data.
-
 There are F-Droid repositories you should add for updates which may be needed to make microG work in the future. These are:
 
 * [microG F-Droid repo](https://microg.org/fdroid.html)
@@ -195,6 +193,8 @@ There are F-Droid repositories you should add for updates which may be needed to
 * [Nanolx F-Droid repo](https://nanolx.org/fdroid/repo/) (for updates to the patched Play Store if you installed the `MinimalIAP` variant)
 
 If you don't want the Play Store to be enabled all the time for battery reasons, [FreezeYou!](https://android.izzysoft.de/repo/apk/cf.playhi.freezeyou) makes disabling it a doddle - with a [supporting launcher](#launcher-plug), you can have it make a shortcut which enables the Play Store and then disables it again when tapped.
+
+NOTE: Currently, the Play Store does not seem to be functioning correctly with microG on the inkPalm (installed applications do not show, paid applications show up as unpaid etc.). I've gone back to using Aurora Store for the time being (bear in mind the previous warnings given). I installed [Aurora Services](https://gitlab.com/AuroraOSS/AuroraServices/-/releases) with Magisk and then [Aurora Store 4.0.5](https://gitlab.com/AuroraOSS/AuroraStore/-/releases) (higher versions crash on the updates page). For Aurora Store to run, you must grant it the ability to install applications. You can do this from the original Android Settings application (Apps & notifications -> Special app access -> Install unknown apps).
 
 # Bromite WebView
 
@@ -223,7 +223,7 @@ A light theme for it, a must on an E Ink screen, seems to be a feature of the Do
 
 You may need to allow the Android System WebView and Download Manager Internet access for apps' functionality to not be broken.
 
-I do not allow UID 1000 (system apps) access to the Internet. This UID encompasses the OTA updater and other Moann system programs. Programs that use the Android's Download Manager framework to download files will be broken as a result of that. If you wish to do the same for privacy reasons and yet still allow such downloads to work, you must do the following:
+I do not allow UID 1000 (system apps) access to the Internet. This UID encompasses the OTA updater and other Moann system programs. Programs that use Android's Download Manager framework to download files will be broken as a result of that. If you wish to do the same for privacy reasons and yet still allow such downloads to work, you must do the following:
 
 * Disable the [Captive Portal detection](https://github.com/ukanth/afwall/issues/761#issue-270028490)
 
