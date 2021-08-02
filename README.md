@@ -111,9 +111,13 @@ This involves writing a file to /system, which may prevent you from installing f
 
 9. I don't think the AVB/dm-verity option needs to be checked, so I left it unchecked. YMMV. The inkPalm doesn't encrypt itself even if you enable a PIN.
 
-10. Choose bimg.img from the storage and let Magisk do its thing (when your inkPalm is rooted, you may want to `rm` this file)
+10. Choose Select and Patch a File and select your bimg.img file from the file chooser
 
-11. Transfer the magisk_patched*.img file in your Downloads folder onto the PC
+11. If taken back to the Install page, press LET'S GO ->
+
+12. Transfer the magisk_patched*.img file in your Downloads folder onto the PC
+
+When your inkPalm is rooted, you may want to `rm /system/bimg.img` and clean up any extra copies on the exposed internal storage.
 
 ### Flashing the patched kernel image
 
